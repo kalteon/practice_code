@@ -13,4 +13,4 @@ def trap(height: list[int]) -> int:
 
         stack.append(i)
     return volume
-print(trap([0,1,0,2,1,0,1,3,2,1,2,1]))
+print(trap([0,1,0,0,2,0,0,0,0,0,0,2]))
