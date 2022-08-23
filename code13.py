@@ -1,9 +1,12 @@
+import collections
+
+
 class Node:
     def __init__(self, data, next = None):
         self.data = data
         self.next = next
 def isPalindrome(head) -> bool:
-    q = []
+    q = collections.deque()
     if not head:
         return True
     node = head
@@ -11,7 +14,7 @@ def isPalindrome(head) -> bool:
         q.append(node.data)
         node = node.next
     while len(q) > 1:
-        if q.pop(0) != q.pop():
+        if q.popleft() != q.pop():
             return False
     return True
 node1 = Node(1)
